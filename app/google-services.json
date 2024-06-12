@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1015385973386",
+    "project_id": "teste2-cdfae",
+    "storage_bucket": "teste2-cdfae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015385973386:android:daf6bf457246414075c373",
+        "android_client_info": {
+          "package_name": "com.stackmobile.teste2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXGfTIGJANew0fjyOUolvhjSJrMDhwho4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

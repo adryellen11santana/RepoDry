@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="10dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="426dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/txtOrdem"
+            android:layout_width="190dp"
+            android:layout_height="29dp"
+            android:text="Ordem de Servico"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:text="Nome:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txtOrdem"
+            app:layout_constraintTop_toBottomOf="@+id/txtOrdem" />
+
+
+        <TextView
+            android:id="@+id/telefone"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="12dp"
+            android:text="Telefone:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/nome"
+            app:layout_constraintTop_toBottomOf="@+id/nome" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="Email:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/telefone"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="10dp" />
+
+        <TextView
+            android:id="@+id/servico"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:text="Servico:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            tools:layout_editor_absoluteX="4dp" />
+
+
+        <TextView
+            android:id="@+id/valor"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Valor:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/servico"
+            tools:layout_editor_absoluteX="10dp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Status:"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/valor"
+            tools:layout_editor_absoluteX="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_finalizar"
+            android:layout_width="294dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="170dp"
+            android:background="@color/softgreen"
+            android:text="Finalizar Serviço"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/status"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.416" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_aceitar"
+            android:layout_width="138dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="170dp"
+            android:background="@color/green"
+            android:text="Aceitar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_finalizar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.821" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_recusar"
+            android:layout_width="138dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="152dp"
+            android:layout_marginTop="170dp"
+            android:background="@color/red"
+            android:text="Recusar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_aceitar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.821" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
