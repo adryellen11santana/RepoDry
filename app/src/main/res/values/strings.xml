@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">N2 Desire</string>
+    <string name="titulo.form.cadastro">Cadastre - se</string>
+    <string name="titulo.form.login">Login</string>
+    <string name="hint_email">Email:</string>
+    <string name="hint_senha">Senha:</string>
+    <string name="hint_nome">Nome:</string>
+    <string name="hint_email_cliente">Email:</string>
+    <string name="hint_senha_cliente">Senha:</string>
+    <string name="hint_telefone">Telefone:</string>
+    <string name="hint_servico">Serviço:</string>
+    <string name="hint_valor">Valor:</string>
+    <string name="hint_status">Status: Aberto</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="btn_sair">Sair</string>
+    <string name="btn_salvar">Salvar</string>
+    <string name="btn_buscar">Visualizar Ordens de Serviço</string>
+    <string name="btn_empresa">Empresa</string>
+    <string name="btn_cliente">Cliente</string>
+    <string name="btn_voltar">Voltar</string>
+    <string name="btn_cad_servico">Cadastrar Servico</string>
+    <string name="btn_acomp_servico">Acompanhar Servico</string>
+    <string name="tela_cadastro">Não possui cadastro? Clique aqui para criar sua conta!</string>
+    <string name="tela_login">Após concluir seu cadastro, você será redirecionado automaticamente para a página de Login</string>
+    <string name="tela_home">Seu cadastro é para:</string>
+    <string name="tela_cliente">Você gostaria de:</string>
+    <string name="txt_dados">Empresa</string>
+
+
+</resources>
