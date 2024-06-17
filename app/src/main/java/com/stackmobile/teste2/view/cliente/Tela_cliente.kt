@@ -4,10 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.stackmobile.teste2.databinding.ActivityHomeBinding
 import com.stackmobile.teste2.databinding.ActivityTelaClienteBinding
-import com.stackmobile.teste2.view.empresa.Tela_empresa
-import com.stackmobile.teste2.view.formlogin.form_login
+import com.stackmobile.teste2.view.empresa.empresa_visualizar_servico
 import com.stackmobile.teste2.view.home.Home
 
 class Tela_cliente : AppCompatActivity() {
@@ -26,7 +24,7 @@ class Tela_cliente : AppCompatActivity() {
         }
 
         binding.btnAcompServico.setOnClickListener {
-            val empresa = Intent(this, Tela_empresa::class.java)
+            val empresa = Intent(this, cliente_visualizar_servico::class.java)
             startActivity(empresa)
             finish()
         }

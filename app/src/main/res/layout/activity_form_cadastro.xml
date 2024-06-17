@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.core.widget.NestedScrollView
+<androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,16 +15,46 @@
         tools:context=".view.formcadastro.Formcadastro">
 
         <TextView
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/titulo.form.cadastro"
-            android:textSize="30dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
             android:gravity="center"
-            android:padding="80dp"
+            android:text="@string/titulo.form.cadastro"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
             />
+
+        <EditText
+            android:id="@+id/edit_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nome"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="25dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_telefone"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="text|phone"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            />
+
 
         <EditText
             android:id="@+id/edit_email"
@@ -80,7 +109,6 @@
             android:textColor="@color/black"
             android:textStyle= "italic"
             android:gravity="center"
-            android:padding="20dp"
             />
     </LinearLayout>
     </androidx.core.widget.NestedScrollView>

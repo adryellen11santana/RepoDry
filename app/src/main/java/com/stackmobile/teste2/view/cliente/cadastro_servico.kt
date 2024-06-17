@@ -27,7 +27,6 @@ class cadastro_servico : AppCompatActivity() {
                 "Nome" to binding.editNome.text.toString(),
                 "Telefone" to binding.editTelefone.text.toString(),
                 "Email" to binding.editEmailCliente.text.toString(),
-                "Senha" to binding.editSenhaCliente.text.toString(),
                 "Servico" to binding.editServico.text.toString(),
                 "Status" to "Aberto",
                 "Valor" to binding.editValor.text.toString()
@@ -49,7 +48,6 @@ class cadastro_servico : AppCompatActivity() {
                     binding.editTelefone.setText("")
                     binding.editServico.setText("")
                     binding.editEmailCliente.setText("")
-                    binding.editSenhaCliente.setText("")
                     binding.editValor.setText("")
                     binding.editStatus.setText("")
 

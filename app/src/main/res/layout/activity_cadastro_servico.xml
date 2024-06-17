@@ -131,21 +131,6 @@
             android:layout_marginTop="20dp"
             />
 
-        <EditText
-            android:id="@+id/edit_senha_cliente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_senha"
-            android:background="@color/white"
-            android:textColor="@color/black"
-            android:padding="15dp"
-            android:maxLines="1"
-            android:inputType="numberPassword"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="20dp"
-            />
-
         <Button
             android:id="@+id/btn_salvar"
             android:layout_width="wrap_content"
@@ -159,5 +144,6 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

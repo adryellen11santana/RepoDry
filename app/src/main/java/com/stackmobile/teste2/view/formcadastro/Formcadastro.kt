@@ -22,7 +22,6 @@ class Formcadastro : AppCompatActivity() {
     private lateinit var binding: ActivityFormCadastroBinding
     private val auth = FirebaseAuth.getInstance()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFormCadastroBinding.inflate(layoutInflater)
@@ -30,10 +29,12 @@ class Formcadastro : AppCompatActivity() {
 
         binding.btnCadastrar.setOnClickListener { view ->
 
+            val nome = binding.editNome.text.toString()
+            val telefone = binding.editTelefone.text.toString()
             val email = binding.editEmail.text.toString()
             val senha = binding.editSenha.text.toString()
 
-            if (email.isEmpty() || senha.isEmpty()) {
+            if (nome.isEmpty() || telefone.isEmpty() || email.isEmpty() || senha.isEmpty()) {
                 val snackbar =
                     Snackbar.make(view, "Preencha todos os campos!", Snackbar.LENGTH_SHORT)
                 snackbar.setBackgroundTint(Color.RED)
@@ -49,6 +50,8 @@ class Formcadastro : AppCompatActivity() {
                             )
                             snackbar.setBackgroundTint(Color.BLUE)
                             snackbar.show()
+                            binding.editNome.setText("")
+                            binding.editTelefone.setText("")
                             binding.editEmail.setText("")
                             binding.editSenha.setText("")
                         }
