@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.stackmobile.teste2.R
@@ -25,6 +24,7 @@ class OrAdapter(private val ordemList: ArrayList<Ordem>) : RecyclerView.Adapter<
         var status: TextView
         var btn_aceitar: Button
         var btn_recusar: Button
+        var btn_finalizar: Button
 
         init {
             email = itemView.findViewById(R.id.email)
@@ -53,6 +53,16 @@ class OrAdapter(private val ordemList: ArrayList<Ordem>) : RecyclerView.Adapter<
                     .addOnSuccessListener { Log.d(TAG, "Atualizado com sucesso!") }
                     .addOnFailureListener { e -> Log.w(TAG, "ERRO ao atualizar", e) }
             }
+            btn_finalizar = itemView.findViewById(R.id.btn_finalizar)
+            btn_finalizar.setOnClickListener {
+                // recusar()
+                val statusRef = db.collection("Clientes").document("Status")
+
+                statusRef
+                    .update("Status", "Finalizado")
+                    .addOnSuccessListener { Log.d(TAG, "Atualizado com sucesso!") }
+                    .addOnFailureListener { e -> Log.w(TAG, "ERRO ao atualizar", e) }
+            }
         }
 
     }
@@ -60,7 +70,7 @@ class OrAdapter(private val ordemList: ArrayList<Ordem>) : RecyclerView.Adapter<
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrAdapter {
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_lista, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_lista_empresa, parent, false)
         return OrAdapter(itemView)
     }
 

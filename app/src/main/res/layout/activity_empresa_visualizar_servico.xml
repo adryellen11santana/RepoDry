@@ -12,7 +12,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/lightgreen"
-    tools:context=".view.empresa.Tela_empresa">
+    tools:context=".view.empresa.empresa_visualizar_servico">
 
     <Button
         android:id="@+id/btn_voltar"
@@ -60,8 +60,7 @@
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="50dp"
-        tools:listitem="@layout/item_lista" />
+        tools:listitem="@layout/item_lista_empresa" />
 
 </LinearLayout>
 </androidx.core.widget.NestedScrollView>
