@@ -12,6 +12,8 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.stackmobile.teste2.R
 import com.stackmobile.teste2.databinding.ActivityFormLoginBinding
+import com.stackmobile.teste2.view.cliente.Tela_cliente
+import com.stackmobile.teste2.view.empresa.Tela_empresa
 import com.stackmobile.teste2.view.formcadastro.Formcadastro
 import com.stackmobile.teste2.view.home.Home
 
@@ -36,20 +38,24 @@ class form_login : AppCompatActivity() {
                     Snackbar.make(view, "Preencha todos os campos", Snackbar.LENGTH_SHORT)
                 snackbar.setBackgroundTint(Color.RED)
                 snackbar.show()
-            } else {
+            } else{
                 auth.signInWithEmailAndPassword(email, senha)
                     .addOnCompleteListener { autenticacao ->
                         if (autenticacao.isSuccessful) {
-                            irParaHome()
-                            binding.editEmail.setText("")
-                            binding.editSenha.setText("")
+                            if (email.toString() == "empresa@empresa.com") {
+                                empresa()
+                                binding.editEmail.setText("")
+                                binding.editSenha.setText("")
+                            }else{
+                                cliente()
+                            }
                         }
                     }.addOnFailureListener {
-                    val snackbar =
-                        Snackbar.make(view, "ERRO ao realizar o login", Snackbar.LENGTH_SHORT)
-                    snackbar.setBackgroundTint(Color.RED)
-                    snackbar.show()
-                }
+                        val snackbar =
+                            Snackbar.make(view, "ERRO ao realizar o login", Snackbar.LENGTH_SHORT)
+                        snackbar.setBackgroundTint(Color.RED)
+                        snackbar.show()
+                    }
             }
         }
 
@@ -70,11 +76,17 @@ class form_login : AppCompatActivity() {
         val usuarioAtual = FirebaseAuth.getInstance().currentUser
 
         if (usuarioAtual != null) {
-            irParaHome()
+
         }
     }
-    private fun irParaHome() {
-        val intent = Intent(this, Home::class.java)
+    private fun empresa() {
+        val intent = Intent(this, Tela_empresa::class.java)
         startActivity(intent)
     }
+
+    private fun cliente() {
+        val intent = Intent(this, Tela_cliente::class.java)
+        startActivity(intent)
+    }
+
 }

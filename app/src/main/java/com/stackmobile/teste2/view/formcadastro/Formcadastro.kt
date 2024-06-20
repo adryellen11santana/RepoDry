@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.stackmobile.teste2.databinding.ActivityFormCadastroBinding
+import com.stackmobile.teste2.view.cliente.Tela_cliente
+import com.stackmobile.teste2.view.empresa.Tela_empresa
 import com.stackmobile.teste2.view.formlogin.form_login
 import com.stackmobile.teste2.view.home.Home
 
@@ -43,6 +45,7 @@ class Formcadastro : AppCompatActivity() {
                 auth.createUserWithEmailAndPassword(email, senha)
                     .addOnCompleteListener { cadastro ->
                         if (cadastro.isSuccessful) {
+                            login()
                             val snackbar = Snackbar.make(
                                 view,
                                 "Cadastro realizado com sucesso!",
@@ -72,6 +75,10 @@ class Formcadastro : AppCompatActivity() {
                 }
             }
         }
+    }
+    private fun login() {
+        val intent = Intent(this, form_login::class.java)
+        startActivity(intent)
     }
 
 }

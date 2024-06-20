@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.stackmobile.teste2.databinding.ActivityTelaClienteBinding
 import com.stackmobile.teste2.view.empresa.empresa_visualizar_servico
+import com.stackmobile.teste2.view.formlogin.form_login
 import com.stackmobile.teste2.view.home.Home
 
 class Tela_cliente : AppCompatActivity() {
@@ -16,9 +17,9 @@ class Tela_cliente : AppCompatActivity() {
         binding = ActivityTelaClienteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnVoltar.setOnClickListener {
+        binding.btnSair.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
-            val voltarHome = Intent(this, Home::class.java)
+            val voltarHome = Intent(this, form_login::class.java)
             startActivity(voltarHome)
             finish()
         }

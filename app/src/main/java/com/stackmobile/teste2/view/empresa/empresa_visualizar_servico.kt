@@ -33,7 +33,8 @@ class empresa_visualizar_servico : AppCompatActivity() {
 
             ordemList = arrayListOf()
 
-            db.collection("Clientes").get()
+            db.collection("Clientes")
+                .get()
                 .addOnSuccessListener {
                     //verifica se achou algo no banco
                     if(!it.isEmpty){

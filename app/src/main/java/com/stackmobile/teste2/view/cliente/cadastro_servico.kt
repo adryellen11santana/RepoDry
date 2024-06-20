@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.stackmobile.teste2.databinding.ActivityCadastroServicoBinding
 import com.stackmobile.teste2.databinding.ActivityTelaClienteBinding
@@ -23,16 +24,19 @@ class cadastro_servico : AppCompatActivity() {
 
         binding.btnSalvar.setOnClickListener {
 
-            val clientesMap = hashMapOf(
+                val clientesMap = hashMapOf(
                 "Nome" to binding.editNome.text.toString(),
                 "Telefone" to binding.editTelefone.text.toString(),
                 "Email" to binding.editEmailCliente.text.toString(),
                 "Servico" to binding.editServico.text.toString(),
                 "Status" to "Aberto",
-                "Valor" to binding.editValor.text.toString()
+                "Valor" to binding.editValor.text.toString(),
+                "Estrelas" to "",
+                "Comentarios" to ""
             )
 
-            db.collection("Clientes").document()
+
+            db.collection("Clientes").document(binding.editTelefone.text.toString())
                 .set(clientesMap).addOnCompleteListener{
                     Log.d("db", "Dados salvos com sucesso!")
 
@@ -58,6 +62,7 @@ class cadastro_servico : AppCompatActivity() {
                     snackbar.show()
                 }
         }
+
         binding.btnVoltar.setOnClickListener {
             val voltar = Intent(this, Tela_cliente::class.java)
             startActivity(voltar)
