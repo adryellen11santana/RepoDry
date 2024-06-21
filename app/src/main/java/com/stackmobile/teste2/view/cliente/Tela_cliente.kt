@@ -35,5 +35,11 @@ class Tela_cliente : AppCompatActivity() {
             startActivity(cliente)
             finish()
         }
+
+        binding.btnAtualizar.setOnClickListener {
+            val atualizar = Intent(this, atualizar_cadastro::class.java)
+            startActivity(atualizar)
+            finish()
+        }
     }
 }

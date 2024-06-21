@@ -70,6 +70,20 @@
             android:textStyle="bold"
             android:gravity="center"/>
 
+        <Button
+            android:id="@+id/btn_atualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35sp"
+            android:backgroundTint="@color/softgreen"
+            android:padding="15dp"
+            android:text="Atualizar Cadastro"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
