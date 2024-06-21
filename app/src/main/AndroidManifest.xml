@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Teste2"
         tools:targetApi="31">
         <activity
+            android:name=".view.cliente.atualizar_cadastro"
+            android:exported="false" />
+        <activity
             android:name=".view.cliente.cliente_visualizar_servico"
             android:exported="false" />
         <activity
