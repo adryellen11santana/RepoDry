@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/lightgreen"
+        tools:context=".view.formcadastro.Formcadastro">
+
+        <Button
+            android:id="@+id/btn_voltar"
+            android:layout_width="68dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:backgroundTint="@color/softgreen"
+            android:padding="1dp"
+            android:text="@string/btn_voltar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="343dp"
+            tools:layout_editor_absoluteY="2dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Atualizar Cadastro"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="67dp" />
+
+        <EditText
+            android:id="@+id/edit_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/hint_nome"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            tools:layout_editor_absoluteY="157dp" />
+
+        <EditText
+            android:id="@+id/edit_telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/hint_telefone"
+            android:inputType="text|phone"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/edit_nome"
+            tools:layout_editor_absoluteY="230dp" />
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/edit_telefone"
+            tools:layout_editor_absoluteY="303dp" />
+
+        <EditText
+            android:id="@+id/edit_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/hint_senha"
+            android:inputType="numberPassword"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/edit_email"
+            tools:layout_editor_absoluteY="373dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_salvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/softgreen"
+            android:padding="15dp"
+            android:text="Salvar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edit_senha"
+            tools:layout_editor_absoluteY="448dp"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
